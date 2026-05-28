@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 2b383c4a1420c7046a58ef72989dd6cc
+guid: 821cc940e6cfd9c458f3ec07a1291590
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5236261804253512120
-    second: Slash-n-ScreamBarAllPhasest_0
-  - first:
-      213: 3948242384377515538
-    second: Slash-n-ScreamBarAllPhasest_1
-  - first:
-      213: -8183918026392774519
-    second: Slash-n-ScreamBarAllPhasest_2
+      213: 6777358995883390622
+    second: casa9_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slash-n-ScreamBarAllPhasest_0
+      name: casa9_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 9
-        width: 30
-        height: 11
+        x: 0
+        y: 0
+        width: 148
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84ef586c1af0557b0800000000000000
-      internalID: -5236261804253512120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slash-n-ScreamBarAllPhasest_1
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 5
-        width: 30
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 21e86f7a789fac630800000000000000
-      internalID: 3948242384377515538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slash-n-ScreamBarAllPhasest_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 3
-        width: 32
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98851fd4ae1ec6e80800000000000000
-      internalID: -8183918026392774519
+      spriteID: e967de849140e0e50800000000000000
+      internalID: 6777358995883390622
       vertices: []
       indices: 
       edges: []
@@ -188,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Slash-n-ScreamBarAllPhasest_0: -5236261804253512120
-      Slash-n-ScreamBarAllPhasest_1: 3948242384377515538
-      Slash-n-ScreamBarAllPhasest_2: -8183918026392774519
+      casa9_0: 6777358995883390622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
