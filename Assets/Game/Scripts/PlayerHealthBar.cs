@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealthUI : MonoBehaviour
+public class PlayerHealthBar : MonoBehaviour
 {
     [SerializeField] private Image[] phaseImages;
 
@@ -14,32 +14,12 @@ public class PlayerHealthUI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (player == null)
-        {
-            player = FindFirstObjectByType<Player>();
-            if (player == null)
-                return;
-        }
+        if (player == null) return;
 
         int health = player.GetHealth();
 
-        for (int i = 0; i < phaseImages.Length; i++)
-        {
-            if (health == 3)
-            {
-                phaseImages[0].gameObject.SetActive(true);
-                i++;
-            }
-            else if (health == 2)
-            {
-                phaseImages[0].gameObject.SetActive(false);
-                phaseImages[1].gameObject.SetActive(true);
-            }
-            else if (health == 1)
-            {
-                phaseImages[1].gameObject.SetActive(false);
-                phaseImages[2].gameObject.SetActive(true);
-            }
-        }
+        phaseImages[0].gameObject.SetActive(health == 3);
+        phaseImages[1].gameObject.SetActive(health == 2);
+        phaseImages[2].gameObject.SetActive(health == 1);
     }
 }
