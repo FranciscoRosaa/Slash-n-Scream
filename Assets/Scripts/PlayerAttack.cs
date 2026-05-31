@@ -52,6 +52,11 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public int GetKnives()
+    {
+        return knives;
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
