@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 933b9baa770ed6442a59127b10d1a885
+guid: 1e0286755661e8c4a82eb1ecb144b5ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8466779966103268678
-    second: lua_0
+      213: 2239329227532714561
+    second: Predio fundo_0
+  - first:
+      213: 7479689253286774748
+    second: Predio fundo_1
+  - first:
+      213: 7693974431174026677
+    second: Predio fundo_2
+  - first:
+      213: 8047916624762933328
+    second: Predio fundo_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +122,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lua_0
+      name: Predio fundo_0
       rect:
         serializedVersion: 2
-        x: 1613
-        y: 225
-        width: 102
-        height: 97
+        x: 0
+        y: 0
+        width: 1920
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab25501da74ff7a80800000000000000
-      internalID: -8466779966103268678
+      spriteID: 142cc366112b31f10800000000000000
+      internalID: 2239329227532714561
       vertices: []
       indices: 
       edges: []
@@ -138,7 +147,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a931a97fcafb6e7428c48e5171b4c0f4
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +155,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":360.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      lua_0: -8466779966103268678
+      Predio fundo_0: 2239329227532714561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

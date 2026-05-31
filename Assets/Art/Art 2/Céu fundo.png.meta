@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 933b9baa770ed6442a59127b10d1a885
+guid: bd4b8ece8ce34f948a516fc14c0cb44d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8466779966103268678
-    second: lua_0
+      213: 8210061429109404866
+    second: "C\xE9u fundo_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lua_0
+      name: "C\xE9u fundo_0"
       rect:
         serializedVersion: 2
-        x: 1613
-        y: 225
-        width: 102
-        height: 97
+        x: 0
+        y: 0
+        width: 1920
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab25501da74ff7a80800000000000000
-      internalID: -8466779966103268678
+      spriteID: 2c4b33afe5fffe170800000000000000
+      internalID: 8210061429109404866
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lua_0: -8466779966103268678
+      "C\xE9u fundo_0": 8210061429109404866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

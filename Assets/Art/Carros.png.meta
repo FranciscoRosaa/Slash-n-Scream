@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 933b9baa770ed6442a59127b10d1a885
+guid: 5be5de0def453a346a6c67ea66b49eb6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8466779966103268678
-    second: lua_0
+      213: 1214559012655123426
+    second: Carros_0
+  - first:
+      213: -67941242205400878
+    second: Carros_1
+  - first:
+      213: -8018080140271641070
+    second: Carros_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lua_0
+      name: Carros_0
       rect:
         serializedVersion: 2
-        x: 1613
-        y: 225
-        width: 102
-        height: 97
+        x: 2
+        y: 0
+        width: 89
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab25501da74ff7a80800000000000000
-      internalID: -8466779966103268678
+      spriteID: 2ebce0cacfafad010800000000000000
+      internalID: 1214559012655123426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carros_1
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 0
+        width: 75
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d09fb8dccf9e0ff0800000000000000
+      internalID: -67941242205400878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carros_2
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 0
+        width: 79
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e9e72189e0ab090800000000000000
+      internalID: -8018080140271641070
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lua_0: -8466779966103268678
+      Carros_0: 1214559012655123426
+      Carros_1: -67941242205400878
+      Carros_2: -8018080140271641070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

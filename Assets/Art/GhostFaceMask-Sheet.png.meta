@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 8f8a2e4193c322a43b01648b457bcd16
+guid: 554f6e525c1cb58488e5c99e67905f0d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2165381874441889627
-    second: nuvem2_0
+      213: 1070240880622878359
+    second: GhostFaceMask-Sheet_0
   - first:
-      213: -7827332063445401637
-    second: nuvem2_1
+      213: 392279807817703422
+    second: GhostFaceMask-Sheet_1
   - first:
-      213: 3703599023401624147
-    second: nuvem2_2
+      213: 134246781427135328
+    second: GhostFaceMask-Sheet_2
   - first:
-      213: 3916619265762843831
-    second: nuvem2_3
+      213: -5410480475165660089
+    second: GhostFaceMask-Sheet_3
+  - first:
+      213: -1396527466782627981
+    second: GhostFaceMask-Sheet_4
+  - first:
+      213: -4485387803096361828
+    second: GhostFaceMask-Sheet_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nuvem2_0
+      name: GhostFaceMask-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 268
-        width: 114
-        height: 64
+        x: 24
+        y: 0
+        width: 131
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a852da68a403f1e0800000000000000
-      internalID: -2165381874441889627
+      spriteID: 79eb0a919624ade00800000000000000
+      internalID: 1070240880622878359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nuvem2_1
+      name: GhostFaceMask-Sheet_1
       rect:
         serializedVersion: 2
-        x: 253
-        y: 259
-        width: 175
-        height: 68
+        x: 196
+        y: 0
+        width: 138
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bdfbf4395fabf5390800000000000000
-      internalID: -7827332063445401637
+      spriteID: eff58852868a17500800000000000000
+      internalID: 392279807817703422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nuvem2_2
+      name: GhostFaceMask-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1319
-        y: 271
-        width: 175
-        height: 68
+        x: 376
+        y: 0
+        width: 131
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 352665470b3d56330800000000000000
-      internalID: 3703599023401624147
+      spriteID: 06334378cb0fcd100800000000000000
+      internalID: 134246781427135328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nuvem2_3
+      name: GhostFaceMask-Sheet_3
       rect:
         serializedVersion: 2
-        x: 1765
-        y: 289
-        width: 155
-        height: 71
+        x: 548
+        y: 0
+        width: 138
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +209,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bcde389870aa5630800000000000000
-      internalID: 3916619265762843831
+      spriteID: 74c609d7cac1ae4b0800000000000000
+      internalID: -5410480475165660089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostFaceMask-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 0
+        width: 131
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37768570ba98e9ce0800000000000000
+      internalID: -1396527466782627981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostFaceMask-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 0
+        width: 128
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c945294ce83b0c1c0800000000000000
+      internalID: -4485387803096361828
       vertices: []
       indices: 
       edges: []
@@ -223,10 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nuvem2_0: -2165381874441889627
-      nuvem2_1: -7827332063445401637
-      nuvem2_2: 3703599023401624147
-      nuvem2_3: 3916619265762843831
+      GhostFaceMask-Sheet_0: 1070240880622878359
+      GhostFaceMask-Sheet_1: 392279807817703422
+      GhostFaceMask-Sheet_2: 134246781427135328
+      GhostFaceMask-Sheet_3: -5410480475165660089
+      GhostFaceMask-Sheet_4: -1396527466782627981
+      GhostFaceMask-Sheet_5: -4485387803096361828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

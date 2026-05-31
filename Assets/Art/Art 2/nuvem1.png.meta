@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 933b9baa770ed6442a59127b10d1a885
+guid: b81655af1f3bc644992f7a123f3e0930
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8466779966103268678
-    second: lua_0
+      213: 762255473129317754
+    second: nuvem1_0
+  - first:
+      213: 3597550516031189746
+    second: nuvem1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lua_0
+      name: nuvem1_0
       rect:
         serializedVersion: 2
-        x: 1613
-        y: 225
-        width: 102
-        height: 97
+        x: 1336
+        y: 219
+        width: 438
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab25501da74ff7a80800000000000000
-      internalID: -8466779966103268678
+      spriteID: a7568ff6053149a00800000000000000
+      internalID: 762255473129317754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nuvem1_1
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 190
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2ff8932211de130800000000000000
+      internalID: 3597550516031189746
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lua_0: -8466779966103268678
+      nuvem1_0: 762255473129317754
+      nuvem1_1: 3597550516031189746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
