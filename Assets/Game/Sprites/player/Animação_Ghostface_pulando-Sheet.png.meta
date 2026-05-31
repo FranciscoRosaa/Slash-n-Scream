@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9f133c40ac322e943a41897c7d062f3b
+guid: d30c9ba647200344cb17f491cb7873cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4582369056822160523
-    second: "anima\xE7\xE3o Ghost2-Sheet_0"
+      213: -3962377391592468107
+    second: "Anima\xE7\xE3o_Ghostface_pulando-Sheet_0"
   - first:
-      213: 604756986457541451
-    second: "anima\xE7\xE3o Ghost2-Sheet_1"
+      213: -8515763183114461750
+    second: "Anima\xE7\xE3o_Ghostface_pulando-Sheet_1"
   - first:
-      213: -4757895136927186631
-    second: "anima\xE7\xE3o Ghost2-Sheet_2"
+      213: -1235348999867363554
+    second: "Anima\xE7\xE3o_Ghostface_pulando-Sheet_2"
   - first:
-      213: -3657834879877994668
-    second: "anima\xE7\xE3o Ghost2-Sheet_3"
+      213: -1431332079381169049
+    second: "Anima\xE7\xE3o_Ghostface_pulando-Sheet_3"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost2-Sheet_0"
+      name: "Anima\xE7\xE3o_Ghostface_pulando-Sheet_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 14
-        height: 29
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5739f5a0f972860c0800000000000000
-      internalID: -4582369056822160523
+      spriteID: 571971481cec209c0800000000000000
+      internalID: -3962377391592468107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost2-Sheet_1"
+      name: "Anima\xE7\xE3o_Ghostface_pulando-Sheet_1"
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4bcc396647846800800000000000000
-      internalID: 604756986457541451
+      spriteID: acddc1fd08ee1d980800000000000000
+      internalID: -8515763183114461750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost2-Sheet_2"
+      name: "Anima\xE7\xE3o_Ghostface_pulando-Sheet_2"
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 14
-        height: 29
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93185e4d49f88fdb0800000000000000
-      internalID: -4757895136927186631
+      spriteID: e1f854931a82bdee0800000000000000
+      internalID: -1235348999867363554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost2-Sheet_3"
+      name: "Anima\xE7\xE3o_Ghostface_pulando-Sheet_3"
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 14
-        height: 30
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 457a6d98e82cc3dc0800000000000000
-      internalID: -3657834879877994668
+      spriteID: 76c3ddcae03e22ce0800000000000000
+      internalID: -1431332079381169049
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 338fbf001753e914286333af3900251c
+    spriteID: f6f5518a83362404289efd1832ea1bfe
     internalID: 0
     vertices: []
     indices: 
@@ -221,12 +221,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "anima\xE7\xE3o Ghost2-Sheet_0": -4582369056822160523
-      "anima\xE7\xE3o Ghost2-Sheet_1": 604756986457541451
-      "anima\xE7\xE3o Ghost2-Sheet_2": -4757895136927186631
-      "anima\xE7\xE3o Ghost2-Sheet_3": -3657834879877994668
+      "Anima\xE7\xE3o_Ghostface_pulando-Sheet_0": -3962377391592468107
+      "Anima\xE7\xE3o_Ghostface_pulando-Sheet_1": -8515763183114461750
+      "Anima\xE7\xE3o_Ghostface_pulando-Sheet_2": -1235348999867363554
+      "Anima\xE7\xE3o_Ghostface_pulando-Sheet_3": -1431332079381169049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -31,8 +31,15 @@ public class Enemy : MonoBehaviour
     private float frozenTimer = 0.0f;
     private Player player;
 
-    void Awake() => rb = GetComponent<Rigidbody2D>();
-    void Start() => player = FindFirstObjectByType<Player>();
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        player = FindFirstObjectByType<Player>();
+    }
 
     void Update()
     {
@@ -59,7 +66,6 @@ public class Enemy : MonoBehaviour
                 break;
 
             case State.Frozen:
-                // stand still and count down
                 rb.linearVelocity = new Vector2(0, rb.linearVelocityY);
                 frozenTimer -= Time.deltaTime;
                 if (frozenTimer <= 0)
@@ -88,12 +94,23 @@ public class Enemy : MonoBehaviour
         return hit.collider == null;
     }
 
-    bool FindWall() => Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, wallLayer) != null;
-    bool FindPlatform() => Physics2D.OverlapCircle(platformCheck.position, platformCheckRadius, platformLayer) != null;
+    bool FindWall()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, wallLayer) != null;
+    }
 
-    public bool IsFrozen() => state == State.Frozen;
+    bool FindPlatform()
+    {
+        return Physics2D.OverlapCircle(platformCheck.position, platformCheckRadius, platformLayer) != null;
+    }
+
+    public bool IsFrozen()
+    {
+        return state == State.Frozen;
+    }
 
     public void Die() => Destroy(gameObject);
+    public State GetState() => state;
 
     void OnDrawGizmosSelected()
     {

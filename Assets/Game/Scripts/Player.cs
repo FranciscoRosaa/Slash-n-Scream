@@ -40,11 +40,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        // timers
         knockbackTime       -= Time.deltaTime;
         invulnerabilityTime -= Time.deltaTime;
 
-        // blink while invulnerable
         if (isInvulnerable)
         {
             blinkTime -= Time.deltaTime;
@@ -59,7 +57,6 @@ public class Player : MonoBehaviour
             spriteRenderer.enabled = true;
         }
 
-        // ground
         onGround               = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         airCollider.enabled    = !onGround;
         groundCollider.enabled = onGround;
@@ -68,7 +65,6 @@ public class Player : MonoBehaviour
         {
             horizontalAxis = Input.GetAxis("Horizontal");
 
-            // jump
             Vector2 vel = rb.linearVelocity;
             if (Input.GetButtonDown("Jump") && onGround)
             {
@@ -86,12 +82,10 @@ public class Player : MonoBehaviour
             }
             rb.linearVelocity = vel;
 
-            // flip sprite
             if      (horizontalAxis < 0) transform.rotation = Quaternion.Euler(0, 180, 0);
             else if (horizontalAxis > 0) transform.rotation = Quaternion.identity;
         }
 
-        // animator
         animator.SetBool("OnGround", onGround);
         animator.SetFloat("AbsVelocityX", Mathf.Abs(horizontalAxis * speed));
         animator.SetFloat("VelocityY", rb.linearVelocity.y);

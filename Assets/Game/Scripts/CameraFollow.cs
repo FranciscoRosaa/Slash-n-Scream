@@ -1,5 +1,4 @@
 using System.Runtime.CompilerServices;
-//using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -27,7 +26,6 @@ public class CameraFollow : MonoBehaviour
         Vector3 targetPosition = target.position + offset;
         targetPosition.z = transform.position.z;
 
-        //transform.position = Vector3.MoveTowards(transform.position, currentPosition, speed * Time.fixedDeltaTime);
         Vector3 error = targetPosition - transform.position;
         transform.position = transform.position + error * speed;
     }

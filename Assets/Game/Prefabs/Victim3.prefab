@@ -76,14 +76,14 @@ GameObject:
   - component: {fileID: 8009002236984261949}
   - component: {fileID: 7899224825370089970}
   - component: {fileID: 3985196621099034743}
-  - component: {fileID: 8126655292630914061}
+  - component: {fileID: 2570572450334279980}
   m_Layer: 10
   m_Name: Victim3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5949560806061094771
 Transform:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 10, y: 27}
   m_EdgeRadius: 0
---- !u!114 &8126655292630914061
+--- !u!114 &2570572450334279980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -310,17 +310,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 7508502325180495558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4a2a2480f3f7df4da2b892ce2fcbf4c, type: 3}
+  m_Script: {fileID: 11500000, guid: edcc3a9603cb5954b9f0de91383f0f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  speed: 100
+  patrolSpeed: 50
   wallCheck: {fileID: 7978737060733381363}
-  wallCheckRadius: 3.49
+  wallCheckRadius: 4.89
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
   platformCheck: {fileID: 6367701864450023569}
-  platformCheckRadius: 2.84
+  platformCheckRadius: 2.87
   platformLayer:
     serializedVersion: 2
     m_Bits: 64
+  visionRange: 35
+  visionAngle: 60
+  sightBlockLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  frozenDuration: 1.5
+  fleeSpeed: 75

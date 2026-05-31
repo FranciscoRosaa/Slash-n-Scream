@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 15695ca09088ac044b1877126f22c639
+guid: bba129a4c8b84794881722f32da55769
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4944635006200202279
-    second: "anima\xE7\xE3o Ghost-Sheet_0"
+      213: 7625703633429406432
+    second: "Anima\xE7\xE3o_Ghostface_caindo-Sheet_0"
   - first:
-      213: -7945161771708388483
-    second: "anima\xE7\xE3o Ghost-Sheet_1"
+      213: 7424046345111637124
+    second: "Anima\xE7\xE3o_Ghostface_caindo-Sheet_1"
   - first:
-      213: -4127541819945508938
-    second: "anima\xE7\xE3o Ghost-Sheet_2"
+      213: -9116607323126736967
+    second: "Anima\xE7\xE3o_Ghostface_caindo-Sheet_2"
   - first:
-      213: -8630687724287185986
-    second: "anima\xE7\xE3o Ghost-Sheet_3"
+      213: 2428086124754303158
+    second: "Anima\xE7\xE3o_Ghostface_caindo-Sheet_3"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost-Sheet_0"
+      name: "Anima\xE7\xE3o_Ghostface_caindo-Sheet_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 14
-        height: 29
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9dbb97fd8a0216bb0800000000000000
-      internalID: -4944635006200202279
+      spriteID: 0e227f84d01f3d960800000000000000
+      internalID: 7625703633429406432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost-Sheet_1"
+      name: "Anima\xE7\xE3o_Ghostface_caindo-Sheet_1"
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 30
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7bee42c67d1db190800000000000000
-      internalID: -7945161771708388483
+      spriteID: 48c8a6c01d2870760800000000000000
+      internalID: 7424046345111637124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost-Sheet_2"
+      name: "Anima\xE7\xE3o_Ghostface_caindo-Sheet_2"
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 14
-        height: 29
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6bf149a559608b6c0800000000000000
-      internalID: -4127541819945508938
+      spriteID: 9b75e4401fd4b7180800000000000000
+      internalID: -9116607323126736967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost-Sheet_3"
+      name: "Anima\xE7\xE3o_Ghostface_caindo-Sheet_3"
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 14
-        height: 30
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ebba98afd33a93880800000000000000
-      internalID: -8630687724287185986
+      spriteID: 6b8f806477b42b120800000000000000
+      internalID: 2428086124754303158
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b20476d8244a7da47866de25e95457fc
     internalID: 0
     vertices: []
     indices: 
@@ -221,12 +221,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "anima\xE7\xE3o Ghost-Sheet_0": -4944635006200202279
-      "anima\xE7\xE3o Ghost-Sheet_1": -7945161771708388483
-      "anima\xE7\xE3o Ghost-Sheet_2": -4127541819945508938
-      "anima\xE7\xE3o Ghost-Sheet_3": -8630687724287185986
+      "Anima\xE7\xE3o_Ghostface_caindo-Sheet_0": 7625703633429406432
+      "Anima\xE7\xE3o_Ghostface_caindo-Sheet_1": 7424046345111637124
+      "Anima\xE7\xE3o_Ghostface_caindo-Sheet_2": -9116607323126736967
+      "Anima\xE7\xE3o_Ghostface_caindo-Sheet_3": 2428086124754303158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

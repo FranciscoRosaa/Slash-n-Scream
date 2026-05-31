@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 34f172ff55bb60047a5a87b3383fa848
+guid: 244d1ea82d70f074c9c25a3b6586c249
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4944635006200202279
-    second: "anima\xE7\xE3o Ghost-Sheet_0"
+      213: -6510181622773397303
+    second: "Anima\xE7\xE3o_GhostFace_Parado-Sheet_0"
   - first:
-      213: -7945161771708388483
-    second: "anima\xE7\xE3o Ghost-Sheet_1"
-  - first:
-      213: -4127541819945508938
-    second: "anima\xE7\xE3o Ghost-Sheet_2"
-  - first:
-      213: -8630687724287185986
-    second: "anima\xE7\xE3o Ghost-Sheet_3"
+      213: 5383081832996644964
+    second: "Anima\xE7\xE3o_GhostFace_Parado-Sheet_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost-Sheet_0"
+      name: "Anima\xE7\xE3o_GhostFace_Parado-Sheet_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 14
-        height: 29
+        width: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9dbb97fd8a0216bb0800000000000000
-      internalID: -4944635006200202279
+      spriteID: 9c8c0577e4037a5a0800000000000000
+      internalID: -6510181622773397303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost-Sheet_1"
+      name: "Anima\xE7\xE3o_GhostFace_Parado-Sheet_1"
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 30
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7bee42c67d1db190800000000000000
-      internalID: -7945161771708388483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost-Sheet_2"
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 14
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6bf149a559608b6c0800000000000000
-      internalID: -4127541819945508938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "anima\xE7\xE3o Ghost-Sheet_3"
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 14
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebba98afd33a93880800000000000000
-      internalID: -8630687724287185986
+      spriteID: 468af94086c84ba40800000000000000
+      internalID: 5383081832996644964
       vertices: []
       indices: 
       edges: []
@@ -213,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5508a48b5cd54d447b98612becfd3f4b
     internalID: 0
     vertices: []
     indices: 
@@ -221,12 +171,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "anima\xE7\xE3o Ghost-Sheet_0": -4944635006200202279
-      "anima\xE7\xE3o Ghost-Sheet_1": -7945161771708388483
-      "anima\xE7\xE3o Ghost-Sheet_2": -4127541819945508938
-      "anima\xE7\xE3o Ghost-Sheet_3": -8630687724287185986
+      "Anima\xE7\xE3o_GhostFace_Parado-Sheet_0": -6510181622773397303
+      "Anima\xE7\xE3o_GhostFace_Parado-Sheet_1": 5383081832996644964
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
