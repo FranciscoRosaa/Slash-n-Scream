@@ -3,7 +3,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("Patrol")]
-    [SerializeField] private float patrolSpeed = 2.0f;
+    [SerializeField] private float patrolSpeed = 1.0f;
+    [SerializeField] private float minTurnTime = 1.0f;
+    [SerializeField] private float maxTurnTime = 1.0f;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private float wallCheckRadius = 0.1f;
     [SerializeField] private LayerMask wallLayer;
@@ -12,15 +14,16 @@ public class Enemy : MonoBehaviour
     [SerializeField] private LayerMask platformLayer;
 
     [Header("Vision")]
-    [SerializeField] private float visionRange = 5.0f;
-    [SerializeField] private float visionAngle = 60.0f;
+    [SerializeField] private float visionRange = 1.0f;
+    [SerializeField] private float visionAngle = 1.0f;
     [SerializeField] private LayerMask sightBlockLayer;
 
     [Header("Frozen")]
     [SerializeField] private float frozenDuration = 1.5f;
 
     [Header("Flee")]
-    [SerializeField] private float fleeSpeed = 4.0f;
+    [SerializeField] private float fleeSpeed = 1.0f;
+    [SerializeField] private float calmDownTime = 1.0f;
 
     public enum State { Patrol, Frozen, Flee }
 
@@ -29,6 +32,8 @@ public class Enemy : MonoBehaviour
     private float dir = 1.0f;
     private float flipCooldown = 0.0f;
     private float frozenTimer = 0.0f;
+    private float turnTimer = 0.0f;
+    private float calmDownTimer = 0.0f;
     private Player player;
 
     void Awake()
@@ -39,6 +44,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = FindFirstObjectByType<Player>();
+        turnTimer = Random.Range(minTurnTime, maxTurnTime);
     }
 
     void Update()
@@ -55,6 +61,14 @@ public class Enemy : MonoBehaviour
                 {
                     dir = -dir;
                     flipCooldown = 0.5f;
+                    turnTimer = Random.Range(minTurnTime, maxTurnTime);
+                }
+
+                turnTimer -= Time.deltaTime;
+                if (turnTimer <= 0)
+                {
+                    dir = -dir;
+                    turnTimer = Random.Range(minTurnTime, maxTurnTime);
                 }
 
                 if (CanSeePlayer())
@@ -75,6 +89,22 @@ public class Enemy : MonoBehaviour
             case State.Flee:
                 dir = Mathf.Sign(transform.position.x - player.transform.position.x);
                 Move(fleeSpeed);
+
+                float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
+                if (distToPlayer > visionRange)
+                {
+                    calmDownTimer += Time.deltaTime;
+                    if (calmDownTimer >= calmDownTime)
+                    {
+                        state = State.Patrol;
+                        calmDownTimer = 0.0f;
+                        turnTimer = Random.Range(minTurnTime, maxTurnTime);
+                    }
+                }
+                else
+                {
+                    calmDownTimer = 0.0f;
+                }
                 break;
         }
 
@@ -82,7 +112,10 @@ public class Enemy : MonoBehaviour
         else if (dir > 0 && transform.right.x < 0) transform.rotation = Quaternion.identity;
     }
 
-    void Move(float speed) => rb.linearVelocity = new Vector2(dir * speed, rb.linearVelocityY);
+    void Move(float speed)
+    {
+        rb.linearVelocity = new Vector2(dir * speed, rb.linearVelocityY);
+    }
 
     bool CanSeePlayer()
     {
@@ -104,13 +137,26 @@ public class Enemy : MonoBehaviour
         return Physics2D.OverlapCircle(platformCheck.position, platformCheckRadius, platformLayer) != null;
     }
 
+    public void AlertFlee()
+    {
+        state = State.Flee;
+        rb.linearVelocity = Vector2.zero;
+    }
+
     public bool IsFrozen()
     {
         return state == State.Frozen;
     }
 
-    public void Die() => Destroy(gameObject);
-    public State GetState() => state;
+    public State GetState()
+    {
+        return state;
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 
     void OnDrawGizmosSelected()
     {
