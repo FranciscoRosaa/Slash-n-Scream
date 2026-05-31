@@ -3,44 +3,44 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float      speed           = 5;
-    [SerializeField] private float      jumpSpeed       = 300;
-    [SerializeField] private float      maxJumpTime     = 0.1f;
-    [SerializeField] private float      gravityOnJump   = 0.75f;
-    [SerializeField] private float      gravityOnFall   = 1.0f;
-    [SerializeField] private float      knockbackSpeed  = 100.0f;
-    [SerializeField] private int        maxHealth       = 3;
-    [SerializeField] private Transform  groundCheck;
-    [SerializeField] private float      groundCheckRadius;
-    [SerializeField] private LayerMask  groundLayer;
+    [SerializeField] private float speed = 5;
+    [SerializeField] private float jumpSpeed = 300;
+    [SerializeField] private float maxJumpTime = 0.1f;
+    [SerializeField] private float gravityOnJump = 0.75f;
+    [SerializeField] private float gravityOnFall = 1.0f;
+    [SerializeField] private float knockbackSpeed = 100.0f;
+    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundCheckRadius;
+    [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Collider2D airCollider;
     [SerializeField] private Collider2D groundCollider;
 
-    private Animator        animator;
-    private SpriteRenderer  spriteRenderer;
-    private Rigidbody2D     rb;
-    private int             health;
-    private bool            onGround;
-    private float           horizontalAxis;
-    private float           jumpTime;
-    private float           knockbackTime;
-    private float           invulnerabilityTime;
-    private float           blinkTime;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
+    private int health;
+    private bool onGround;
+    private float horizontalAxis;
+    private float jumpTime;
+    private float knockbackTime;
+    private float invulnerabilityTime;
+    private float blinkTime;
 
-    bool isKnockback    => knockbackTime > 0;
+    bool isKnockback => knockbackTime > 0;
     bool isInvulnerable => invulnerabilityTime > 0;
 
     void Start()
     {
-        animator       = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rb             = GetComponent<Rigidbody2D>();
-        health         = PlayerHealth.current > 0 ? PlayerHealth.current : maxHealth;
+        rb = GetComponent<Rigidbody2D>();
+        health = GameManager.Instance != null && GameManager.Instance.health > 0 ? GameManager.Instance.health : maxHealth;
     }
 
     void Update()
     {
-        knockbackTime       -= Time.deltaTime;
+        knockbackTime -= Time.deltaTime;
         invulnerabilityTime -= Time.deltaTime;
 
         if (isInvulnerable)
@@ -57,8 +57,8 @@ public class Player : MonoBehaviour
             spriteRenderer.enabled = true;
         }
 
-        onGround               = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        airCollider.enabled    = !onGround;
+        onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        airCollider.enabled = !onGround;
         groundCollider.enabled = onGround;
 
         if (!isKnockback)
@@ -68,8 +68,8 @@ public class Player : MonoBehaviour
             Vector2 vel = rb.linearVelocity;
             if (Input.GetButtonDown("Jump") && onGround)
             {
-                vel.y           = jumpSpeed;
-                jumpTime        = Time.time;
+                vel.y = jumpSpeed;
+                jumpTime = Time.time;
                 rb.gravityScale = gravityOnJump;
             }
             else if (Input.GetButton("Jump") && (Time.time - jumpTime) < maxJumpTime)
@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
             }
             rb.linearVelocity = vel;
 
-            if      (horizontalAxis < 0) transform.rotation = Quaternion.Euler(0, 180, 0);
+            if (horizontalAxis < 0) transform.rotation = Quaternion.Euler(0, 180, 0);
             else if (horizontalAxis > 0) transform.rotation = Quaternion.identity;
         }
 
@@ -102,19 +102,19 @@ public class Player : MonoBehaviour
         if (isInvulnerable) return;
 
         health -= value;
-        PlayerHealth.current = health;
+        if (GameManager.Instance != null) GameManager.Instance.health = health;
 
         if (health <= 0)
         {
-            PlayerHealth.current = 0;
-            enabled              = false;
-            rb.linearVelocity    = Vector2.zero;
+            if (GameManager.Instance != null) GameManager.Instance.health = 0;
+            enabled = false;
+            rb.linearVelocity = Vector2.zero;
             Invoke("GameOver", 1.0f);
             return;
         }
 
-        rb.linearVelocity   = new Vector2(Mathf.Sign(dirX) * knockbackSpeed, knockbackSpeed);
-        knockbackTime       = 0.4f;
+        rb.linearVelocity = new Vector2(Mathf.Sign(dirX) * knockbackSpeed, knockbackSpeed);
+        knockbackTime = 0.4f;
         invulnerabilityTime = 2.0f;
     }
 
