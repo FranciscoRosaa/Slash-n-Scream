@@ -7,8 +7,13 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
+        Time.timeScale = 1f;
+
         if (GameManager.Instance != null)
             GameManager.Instance.ResetAll();
+
+        if (NotorietyManager.Instance != null)
+            NotorietyManager.Instance.ResetNotoriety();
 
         SceneManager.LoadScene(sceneIndex);
     }

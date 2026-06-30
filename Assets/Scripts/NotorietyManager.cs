@@ -20,6 +20,7 @@ public class NotorietyManager : MonoBehaviour
     private float currentNotoriety = 0f;
     private bool policeArrived = false;
     private float policeTimer = 0f;
+    private bool hasLoadedGameOver = false;
 
     public float Notoriety => currentNotoriety;
     public float NotorietyNormalized => currentNotoriety / maxNotoriety;
@@ -30,16 +31,28 @@ public class NotorietyManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        if (Instance == null || Instance == this)
+        {
+            Instance = this;
+        }
+        else
+        {
+            return;
+        }
     }
 
     void Update()
     {
         if (policeArrived)
         {
+            if (hasLoadedGameOver) return;
+
             policeTimer -= Time.deltaTime;
             if (policeTimer <= 0)
+            {
+                hasLoadedGameOver = true;
                 SceneManager.LoadScene(gameOverSceneIndex);
+            }
             return;
         }
 
@@ -64,6 +77,14 @@ public class NotorietyManager : MonoBehaviour
         if (policeArrived) return;
         policeArrived = true;
         policeTimer = policeArrivalDelay;
+    }
+
+    public void ResetNotoriety()
+    {
+        currentNotoriety = 0f;
+        policeArrived = false;
+        policeTimer = 0f;
+        hasLoadedGameOver = false;
     }
 
     public void SaveToGameManager()
