@@ -409,6 +409,7 @@ MonoBehaviour:
   gravityOnFall: 0.75
   knockbackSpeed: 100
   maxHealth: 3
+  gameOverSceneIndex: 2
   groundCheck: {fileID: 4570348497995739277}
   groundCheckRadius: 5
   groundLayer:
@@ -430,6 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   attackRange: 5
   knives: 1
+  maxKnives: 1
 --- !u!114 &259774198009470350
 MonoBehaviour:
   m_ObjectHideFlags: 0

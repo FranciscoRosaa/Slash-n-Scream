@@ -6,29 +6,41 @@ public class Door : MonoBehaviour
     [SerializeField] private int nextSceneIndex;
     [SerializeField] private GameObject doorVisual;
 
+    private bool isOpen = false;
+
     void Start()
     {
         if (doorVisual != null)
             doorVisual.SetActive(false);
+
+        EnemyTracker.OnAllEnemiesDead += OpenDoor;
+
+        if (EnemyTracker.Instance != null && EnemyTracker.Instance.GetEnemyCount() == 0)
+            OpenDoor();
     }
 
-    void Update()
+    void OnDestroy()
     {
-        Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
-        if (enemies.Length == 0)
-        {
-            if (doorVisual != null)
-                doorVisual.SetActive(true);
-        }
+        EnemyTracker.OnAllEnemiesDead -= OpenDoor;
+    }
+
+    void OpenDoor()
+    {
+        isOpen = true;
+        if (doorVisual != null)
+            doorVisual.SetActive(true);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!isOpen) return;
+
         if (collision.GetComponentInParent<Player>() != null)
         {
-            Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
-            if (enemies.Length == 0)
-                SceneManager.LoadScene(nextSceneIndex);
+            if (NotorietyManager.Instance != null)
+                NotorietyManager.Instance.SaveToGameManager();
+
+            SceneManager.LoadScene(nextSceneIndex);
         }
     }
 }

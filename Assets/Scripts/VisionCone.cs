@@ -1,13 +1,19 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class VisionCone : MonoBehaviour
 {
-    [SerializeField] private float visionRange = 5.0f;
-    [SerializeField] private float visionAngle = 60.0f;
-    [SerializeField] private int rayCount = 20;
-    [SerializeField] private Color normalColor = new Color(1f, 1f, 0f, 0.3f);
-    [SerializeField] private Color alertColor = new Color(1f, 0f, 0f, 0.5f);
+    [Header("Shape")]
+    [SerializeField] private float visionRange = 3.5f;
+    [SerializeField] private float visionAngle = 47.0f;
+
+    [Header("Pixel Art Style")]
+    [SerializeField] private int rayCount = 6;
+    [SerializeField] private float pixelSnapSize = 0.25f;
+
+    [Header("Colors")]
+    [SerializeField] private Color normalColor = new Color(1f, 0.9f, 0f, 0.25f);
+    [SerializeField] private Color frozenColor = new Color(1f, 0.5f, 0f, 0.5f);
+    [SerializeField] private Color fleeColor   = new Color(1f, 0.1f, 0.1f, 0.6f);
 
     private Mesh mesh;
     private MeshFilter meshFilter;
@@ -20,7 +26,6 @@ public class VisionCone : MonoBehaviour
         meshRenderer = GetComponent<MeshRenderer>();
         mesh = new Mesh();
         meshFilter.mesh = mesh;
-
         enemy = GetComponentInParent<Enemy>();
     }
 
@@ -37,19 +42,24 @@ public class VisionCone : MonoBehaviour
 
         vertices[0] = Vector3.zero;
 
-        float angleStep = (visionAngle * 2) / rayCount;
+        float angleStep = (visionAngle * 2f) / rayCount;
         float startAngle = -visionAngle;
 
         for (int i = 0; i <= rayCount; i++)
         {
             float angle = startAngle + angleStep * i;
             Vector3 dir = Quaternion.Euler(0, 0, angle) * Vector3.right;
-            vertices[i + 1] = dir * visionRange;
+            Vector3 tip = dir * visionRange;
+
+            tip.x = Mathf.Round(tip.x / pixelSnapSize) * pixelSnapSize;
+            tip.y = Mathf.Round(tip.y / pixelSnapSize) * pixelSnapSize;
+
+            vertices[i + 1] = tip;
         }
 
         for (int i = 0; i < rayCount; i++)
         {
-            triangles[i * 3] = 0;
+            triangles[i * 3]     = 0;
             triangles[i * 3 + 1] = i + 1;
             triangles[i * 3 + 2] = i + 2;
         }
@@ -63,7 +73,16 @@ public class VisionCone : MonoBehaviour
     {
         if (enemy == null) return;
 
-        bool isAlert = enemy.GetState() == Enemy.State.Frozen || enemy.GetState() == Enemy.State.Flee;
-        meshRenderer.material.color = isAlert ? alertColor : normalColor;
+        Color target = normalColor;
+
+        switch (enemy.GetState())
+        {
+            case Enemy.State.Frozen: target = frozenColor; break;
+            case Enemy.State.Flee:   target = fleeColor;   break;
+        }
+
+        meshRenderer.material.color = Color.Lerp(
+            meshRenderer.material.color, target, Time.deltaTime * 8f
+        );
     }
 }

@@ -4,12 +4,16 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private float attackRange = 2.0f;
     [SerializeField] private int knives = 1;
+    [SerializeField] private int maxKnives = 1;
 
-    private Player player;
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip attackSound;
 
-    void Start()
+    void Awake()
     {
-        player = GetComponent<Player>();
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -23,6 +27,11 @@ public class PlayerAttack : MonoBehaviour
     void TryAttack()
     {
         if (knives <= 0) return;
+
+        if (audioSource != null && attackSound != null)
+        {
+            audioSource.PlayOneShot(attackSound);
+        }
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
 
@@ -39,11 +48,11 @@ public class PlayerAttack : MonoBehaviour
                 enemy.Die();
                 if (GameManager.Instance != null)
                     GameManager.Instance.score++;
+                if (LevelTimer.Instance != null)
+                    LevelTimer.Instance.OnVictimKilled();
             }
             else
             {
-                float dirX = transform.position.x - enemy.transform.position.x;
-                player.DealDamage(1, dirX);
                 enemy.AlertFlee();
             }
 
@@ -59,7 +68,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void AddKnife()
     {
-        knives++;
+        knives = Mathf.Min(knives + 1, maxKnives);
     }
 
     void OnDrawGizmosSelected()

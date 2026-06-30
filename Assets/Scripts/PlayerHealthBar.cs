@@ -18,8 +18,8 @@ public class PlayerHealthBar : MonoBehaviour
 
         int health = player.GetHealth();
 
-        phaseImages[0].gameObject.SetActive(health == 3);
+        phaseImages[0].gameObject.SetActive(health == 1);
         phaseImages[1].gameObject.SetActive(health == 2);
-        phaseImages[2].gameObject.SetActive(health == 1);
+        phaseImages[2].gameObject.SetActive(health == 3);
     }
 }

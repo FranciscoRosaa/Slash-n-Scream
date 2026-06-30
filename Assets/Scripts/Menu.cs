@@ -7,12 +7,14 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
+        if (GameManager.Instance != null)
+            GameManager.Instance.ResetAll();
+
         SceneManager.LoadScene(sceneIndex);
     }
 
     public void ExitGame()
     {
-        //Debug.Log("QUIT");
         Application.Quit();
     }
 }

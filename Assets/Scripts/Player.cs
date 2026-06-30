@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float gravityOnFall = 1.0f;
     [SerializeField] private float knockbackSpeed = 100.0f;
     [SerializeField] private int maxHealth = 3;
+    [SerializeField] private int gameOverSceneIndex = 0;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundLayer;
@@ -118,7 +119,7 @@ public class Player : MonoBehaviour
         invulnerabilityTime = 2.0f;
     }
 
-    void GameOver() => SceneManager.LoadScene("Game Over");
+    void GameOver() { SceneManager.LoadScene(gameOverSceneIndex); }
 
     public int GetHealth() => health;
 
