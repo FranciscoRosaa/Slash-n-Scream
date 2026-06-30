@@ -2660,7 +2660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NotorietyManager
   maxNotoriety: 100
-  notorietyDecayPerSecond: 2
+  notorietyDecayPerSecond: 3
   gameOverSceneIndex: 3
   policeArrivalDelay: 0
   minSpeedMultiplier: 1
